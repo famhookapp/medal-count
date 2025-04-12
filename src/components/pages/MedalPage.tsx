@@ -9,7 +9,7 @@ export default function MedalPage({ sortId } : {sortId: keyof Country}) {
   const [countries, setCountries] = useState<Country[]>([]);
   
   useEffect(() => {
-    fetchStudents().then(setCountries);
+    fetchStudents().then(setCountries, () => setCountries([]));
   },[]);
 
   return (

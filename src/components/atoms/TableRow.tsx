@@ -1,4 +1,3 @@
-// components/TableHeader.tsx
 import { Country } from "@/types/country";
 export default function TableRow({
   student,

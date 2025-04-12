@@ -1,5 +1,4 @@
 import { TSortKey } from "@/types/sortkey";
-// components/TableHeader.tsx
 export default function TableHeader({
   label,
   sortKey,

@@ -19,7 +19,8 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "next-intl.config": ["./next-intl.config.ts"]
     },
     "typeRoots": ["./node_modules/@types", "./types"]
   },

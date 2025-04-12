@@ -10,9 +10,11 @@ const MedalTable: React.FC<Props> = ({ rowItem, sortCol }) => {
   const [sortKey, setSortKey] = useState<TSortKey | null>(null);
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
   const [sortedItems, setSortedItems] = useState<Country[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const t = useTranslations();
 
   const getSortedItems = useCallback(() => {
+    setIsLoading(true);
     const itemsSorted = [...rowItem].sort((x, y) => {
       if (!sortKey) return 0;
       let firstLevelSort = 0;
@@ -52,6 +54,7 @@ const MedalTable: React.FC<Props> = ({ rowItem, sortCol }) => {
       return 0;
     });
     setSortedItems(itemsSorted);
+    setIsLoading(false);
   }, [rowItem, sortKey, sortOrder]);
 
   useEffect(() => {
@@ -115,7 +118,7 @@ const MedalTable: React.FC<Props> = ({ rowItem, sortCol }) => {
         </div>
       ) : (
         <div className="w-full table-auto border-collapse py-5 px-5">
-          {t("noData")}
+          {isLoading ? t("loadingData") : t("noData")}
         </div>
       )}
     </div>
