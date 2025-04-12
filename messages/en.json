@@ -1,0 +1,9 @@
+{
+    "table":{
+        "header": "Medal Count",
+        "column-country": "Country",
+        "column-total": "Total"
+    },
+    "noData": "No data available. Please try again later.",
+    "loadingData": "Please wait. Loading..."
+}
