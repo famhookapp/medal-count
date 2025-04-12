@@ -1,5 +1,8 @@
 ## Getting Started
 
+# Prerequisite 
+NodeJS 18+
+
 First, you need to install the dependencies
 
 ```bash
@@ -18,4 +21,4 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-[table with list of medals](image.png)
+(image.png)
