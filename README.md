@@ -1,6 +1,6 @@
-## Getting Started
+# Getting Started
 
-# Prerequisite 
+## Prerequisite 
 NodeJS 18+
 
 First, you need to install the dependencies
